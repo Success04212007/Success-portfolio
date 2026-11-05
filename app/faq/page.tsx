@@ -1,6 +1,7 @@
 import { PageIntro, CTA } from "@/components/sections";
+import FAQAccordion from "./faq-accordion";
 
-const faqs = [
+const faqs: [string, string][] = [
   ["What do you specialize in?", "I specialize in Wix website design and development, creating modern, responsive and professionally structured websites for businesses, entrepreneurs, service providers and personal brands."],
   ["Do you design Wix websites from scratch?", "Yes. A new Wix website can be planned and built around the business identity, requirements, audience and objectives."],
   ["Can you redesign my existing Wix website?", "Yes. A redesign can address visual presentation, content hierarchy, navigation, responsive layouts and the overall visitor journey."],
@@ -27,7 +28,7 @@ export default function FAQ() {
     <main>
       <PageIntro eyebrow="WIX WEBSITE DESIGN / FAQ" title="Questions worth answering before a Wix website project begins." body="Practical answers about Wix design, project scope, functionality, subscriptions and collaboration." />
       <section className="content-section">
-        <div className="container">{faqs.map(([question, answer]) => <article className="faq-item" key={question}><h3>{question}</h3><p>{answer}</p></article>)}</div>
+        <div className="container"><FAQAccordion items={faqs} /></div>
       </section>
       <CTA title="Have a question about your Wix website?" body="Share your requirements and I will use them to understand what the project needs." />
     </main>
