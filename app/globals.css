@@ -304,3 +304,7 @@
 @media(max-width:950px){.portfolio-concept-copy{min-height:260px}}
 @media(max-width:800px){.portfolio-results-count{margin-top:-10px}.portfolio-concept-art{aspect-ratio:16/10}.case-study-image-frame{aspect-ratio:4/3;min-height:180px}.case-study-image-card{padding:8px}}
 @media(prefers-reduced-motion:reduce){.portfolio-project-image,.work-project-image{transition:none}}
+
+
+/* Uploaded Success Daniel monogram logo */
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;flex:0 0 48px;overflow:hidden;border-radius:4px;line-height:0}.brand-logo-image{display:block;width:100%;height:100%;object-fit:cover}.footer-brand-lockup{display:inline-flex;align-items:center;gap:14px}.footer-brand-image{display:block;width:58px;height:58px;object-fit:cover;border-radius:4px}

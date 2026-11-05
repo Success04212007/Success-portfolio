@@ -58,7 +58,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="nav-wrap">
         <Link href="/" className="brand" onClick={closeMenus} aria-label="Success Daniel home">
-          <b className="brand-mark">SD<span>.</span></b>
+          <span className="brand-mark"><Image src="/images/success-daniel-logo.jpg" alt="" width={52} height={52} priority className="brand-logo-image" /></span>
           <span className="brand-copy">
             <strong>SUCCESS DANIEL</strong>
             <small>WIX WEBSITE DESIGN &amp; DEVELOPMENT</small>
@@ -149,7 +149,7 @@ export function SiteFooter() {
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
-          <div><b className="footer-brand">SUCCESS DANIEL<span>.</span></b><p>Wix website design and development.<br />Thoughtful digital experiences built around your business.</p><div className="footer-quick-links"><Link href="/about">About</Link><Link href="/services">Wix Services</Link><Link href="/portfolio">Portfolio</Link><Link href="/process">My Process</Link><Link href="/insights">Insights</Link><Link href="/contact">Contact</Link></div></div>
+          <div><Link href="/" className="footer-brand-lockup" aria-label="Success Daniel home"><Image src="/images/success-daniel-logo.jpg" alt="" width={58} height={58} className="footer-brand-image" /><b className="footer-brand">SUCCESS DANIEL<span>.</span></b></Link><p>Wix website design and development.<br />Thoughtful digital experiences built around your business.</p><div className="footer-quick-links"><Link href="/about">About</Link><Link href="/services">Wix Services</Link><Link href="/portfolio">Portfolio</Link><Link href="/process">My Process</Link><Link href="/insights">Insights</Link><Link href="/contact">Contact</Link></div></div>
           <div><small>HAVE A WIX PROJECT IN MIND?</small><p><Link href="/contact">Let's discuss your website ↗</Link></p></div>
         </div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Success Daniel. All rights reserved.</span><div><Link href="/privacy-policy">Privacy</Link><Link href="/terms-and-conditions">Terms</Link><Link href="/faq">FAQs</Link></div></div>
