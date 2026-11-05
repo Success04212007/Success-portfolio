@@ -6,22 +6,22 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const services = [
-  ["Business Website Design", "/services/business-website-design"],
-  ["Website Redesign", "/services/website-redesign"],
-  ["E-commerce Development", "/services/ecommerce-website-development"],
-  ["Landing Page Design", "/services/landing-page-design"],
-  ["Wix Development", "/services/wix-website-development"],
-  ["WordPress Development", "/services/wordpress-website-development"],
-  ["Shopify Development", "/services/shopify-website-development"],
-  ["Website Optimization & SEO", "/services/website-optimization-seo"],
+  ["Wix Business Website Design", "/services/wix-business-website-design"],
+  ["Wix Website Redesign", "/services/wix-website-redesign"],
+  ["Wix Studio Website Design", "/services/wix-studio-website-design"],
+  ["Wix Landing Page Design", "/services/wix-landing-page-design"],
+  ["Wix E-commerce Website Design", "/services/wix-ecommerce-website-design"],
+  ["Wix CMS & Dynamic Websites", "/services/wix-cms-dynamic-websites"],
+  ["Wix Functionality & Integrations", "/services/wix-functionality-integrations"],
+  ["Wix Optimization & SEO Foundations", "/services/wix-website-optimization-seo-foundations"],
 ];
 
 const aboutLinks = [
-  ["01", "Meet Success Daniel", "Professional identity, background and approach to website design.", "/about#meet-success"],
-  ["02", "Design Philosophy", "The principles behind visual design, structure and user experience.", "/about#design-philosophy"],
-  ["03", "Expertise & Platforms", "Wix, WordPress, Shopify and digital experience capabilities.", "/about#expertise"],
+  ["01", "Meet Success Daniel", "Professional identity and the person behind the work.", "/about#meet-success"],
+  ["02", "Design Philosophy", "The principles behind visual design, structure and usability.", "/about#design-philosophy"],
+  ["03", "Wix Specialization", "The Wix website design and development capabilities I focus on.", "/about#expertise"],
   ["04", "Professional Standards", "The values that guide communication, collaboration and quality.", "/about#professional-standards"],
-  ["05", "My Approach", "How projects move from discovery and planning to delivery.", "/about#my-approach"],
+  ["05", "My Approach", "How Wix projects move from discovery and planning to delivery.", "/about#my-approach"],
 ];
 
 export function SiteHeader() {
@@ -61,7 +61,7 @@ export function SiteHeader() {
           <b className="brand-mark">SD<span>.</span></b>
           <span className="brand-copy">
             <strong>SUCCESS DANIEL</strong>
-            <small>WEB DESIGN &amp; DIGITAL EXPERIENCES</small>
+            <small>WIX WEBSITE DESIGN &amp; DEVELOPMENT</small>
           </span>
         </Link>
 
@@ -102,8 +102,8 @@ export function SiteHeader() {
                 <div className="mega-profile-copy">
                   <span className="mega-kicker">THE PERSON BEHIND THE WORK</span>
                   <h2>SUCCESS DANIEL</h2>
-                  <p className="mega-role">Website Designer &amp; Digital Experience Specialist</p>
-                  <p>Get to know the person behind the work, explore the thinking behind the designs, and discover the principles that shape my approach to creating digital experiences.</p>
+                  <p className="mega-role">Wix Website Designer &amp; Digital Experience Specialist</p>
+                  <p>Get to know the person behind the work and the principles that shape my approach to designing and building professional Wix websites.</p>
                   <Link className="mega-story-link" href="/about#meet-success" onClick={closeMenus}>EXPLORE MY STORY <span>→</span></Link>
                 </div>
               </div>
@@ -134,7 +134,7 @@ export function SiteHeader() {
           </div>
 
           <Link href="/portfolio" onClick={closeMenus} aria-current={pathname.startsWith("/portfolio") ? "page" : undefined}>Portfolio</Link>
-          <Link href="/process" onClick={closeMenus} aria-current={pathname.startsWith("/process") ? "page" : undefined}>Process</Link>
+          <Link href="/process" onClick={closeMenus} aria-current={pathname.startsWith("/process") ? "page" : undefined}>My Process</Link>
           <Link href="/insights" onClick={closeMenus} aria-current={pathname.startsWith("/insights") ? "page" : undefined}>Insights</Link>
           <Link href="/contact" onClick={closeMenus} aria-current={pathname.startsWith("/contact") ? "page" : undefined}>Contact</Link>
           <Link className="nav-cta" href="/contact" onClick={closeMenus}>LET'S DISCUSS YOUR PROJECT <span>↗</span></Link>
@@ -149,8 +149,8 @@ export function SiteFooter() {
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
-          <div><b className="footer-brand">SUCCESS DANIEL<span>.</span></b><p>Strategic digital design. Thoughtful website experiences.<br />Built around the way your business works.</p></div>
-          <div><small>HAVE A PROJECT IN MIND?</small><p><Link href="/contact">Let's make it meaningful ↗</Link></p></div>
+          <div><b className="footer-brand">SUCCESS DANIEL<span>.</span></b><p>Wix website design and development.<br />Thoughtful digital experiences built around your business.</p><div className="footer-quick-links"><Link href="/about">About</Link><Link href="/services">Wix Services</Link><Link href="/portfolio">Portfolio</Link><Link href="/process">My Process</Link><Link href="/insights">Insights</Link><Link href="/contact">Contact</Link></div></div>
+          <div><small>HAVE A WIX PROJECT IN MIND?</small><p><Link href="/contact">Let's discuss your website ↗</Link></p></div>
         </div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Success Daniel. All rights reserved.</span><div><Link href="/privacy-policy">Privacy</Link><Link href="/terms-and-conditions">Terms</Link><Link href="/faq">FAQs</Link></div></div>
       </div>
