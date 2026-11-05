@@ -274,3 +274,33 @@
 .insight-article h2{font-size:clamp(25px,3vw,34px);line-height:1.2;letter-spacing:-.8px;margin:16px 0}
 .insight-article p{font-size:15px;line-height:1.95;color:#656e7a;max-width:760px}
 @media(max-width:600px){.faq-item h3 button{font-size:15px}.faq-answer p{margin-right:0}.insight-article p{font-size:14px}}
+
+
+/* Supplied website visuals: image-led Wix portfolio */
+.portfolio-results-count{font-size:8px;letter-spacing:1.4px;color:#8c929a;font-weight:800;margin:-18px 0 24px}
+.portfolio-concept-grid{align-items:stretch}
+.portfolio-concept-art{position:relative;display:block;aspect-ratio:16/10;min-height:0;padding:0;background:#eeefec;overflow:hidden}
+.portfolio-concept-card:nth-child(3n+2) .portfolio-concept-art,.portfolio-concept-card:nth-child(3n) .portfolio-concept-art{background:#eeefec}
+.portfolio-project-image{object-fit:contain;padding:0;transition:transform .45s ease}
+.portfolio-concept-art:hover .portfolio-project-image{transform:scale(1.025)}
+.portfolio-image-number{position:absolute;z-index:2;top:13px;left:14px;padding:7px 9px;background:#101827d9;color:#fff;font-size:8px;letter-spacing:1px}
+.portfolio-concept-art .concept-label{position:absolute;z-index:2;left:13px;bottom:13px;background:#101827e8;color:#fff;padding:8px 10px;font-size:7px;letter-spacing:1.1px}
+.portfolio-concept-copy{min-height:280px}
+.portfolio-concept-copy .portfolio-project-type{font-size:9px;line-height:1.5;letter-spacing:1.1px;text-transform:uppercase;color:#9a7848;font-weight:800;margin:0 0 8px}
+.portfolio-authenticity-note{margin-top:34px}
+.work-art{position:relative;aspect-ratio:16/10;min-height:0;background:#eeefec;overflow:hidden}
+.work-project-image{object-fit:contain;transition:transform .45s ease}
+.work-art-link:hover .work-project-image{transform:scale(1.02)}
+.work-art .concept-label{position:absolute;z-index:2;left:14px;bottom:14px;background:#101827e8;color:#fff;padding:9px 11px;font-size:7px;letter-spacing:1.1px}
+.case-study-visual-section{padding-top:12px;padding-bottom:30px}
+.case-study-image-grid{display:grid;grid-template-columns:1fr;gap:22px}
+.case-study-image-card{margin:0;background:#f0f0ed;border:1px solid var(--line);padding:12px}
+.case-study-image-frame{position:relative;width:100%;aspect-ratio:16/9;min-height:250px;background:#e7e8e5;overflow:hidden}
+.case-study-project-image{object-fit:contain}
+.case-study-image-card figcaption{font-size:8px;letter-spacing:1.2px;color:#8c929a;padding:11px 3px 1px;font-weight:800}
+.case-study-details-section{padding-top:42px}
+.case-study-content-grid h2{max-width:560px}
+.case-study-content-grid p{font-size:14px;line-height:1.9;color:#6d7580}
+@media(max-width:950px){.portfolio-concept-copy{min-height:260px}}
+@media(max-width:800px){.portfolio-results-count{margin-top:-10px}.portfolio-concept-art{aspect-ratio:16/10}.case-study-image-frame{aspect-ratio:4/3;min-height:180px}.case-study-image-card{padding:8px}}
+@media(prefers-reduced-motion:reduce){.portfolio-project-image,.work-project-image{transition:none}}
