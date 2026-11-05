@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -65,9 +66,8 @@ export default function About() {
           </div>
           <div className="about-hero-visual">
             <div className="about-portrait-frame">
-              <div className="about-portrait-placeholder" role="img" aria-label="Portrait placeholder for Success Daniel">
-                <span className="about-portrait-monogram">SD</span>
-                <span className="about-portrait-caption">SUCCESS DANIEL / PORTRAIT</span>
+              <div className="about-portrait-placeholder">
+                <Image src="/images/success-daniel-portrait.jpeg" alt="Success Daniel, Website Designer and Digital Experience Specialist" fill priority sizes="(max-width: 800px) 90vw, 38vw" className="about-portrait-image" />
               </div>
               <div className="about-image-note"><span>01 / PERSONAL INTRODUCTION</span><span>DESIGN &amp; DIGITAL EXPERIENCE</span></div>
             </div>
