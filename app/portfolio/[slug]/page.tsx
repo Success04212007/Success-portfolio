@@ -33,6 +33,12 @@ export function generateStaticParams() {
   return Object.keys(cases).map((slug) => ({ slug }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const item = cases[slug];
+  return item ? { title: item.title + " | Wix Design Concept", description: item.summary } : { title: "Wix Portfolio Concept" };
+}
+
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = cases[slug];
