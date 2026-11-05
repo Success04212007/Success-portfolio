@@ -91,6 +91,12 @@ export function generateStaticParams() {
   return Object.keys(data).map((slug) => ({ slug }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const item = data[slug];
+  return item ? { title: item.title + " | Wix Website Design", description: item.intro } : { title: "Wix Website Design Services" };
+}
+
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = data[slug];
