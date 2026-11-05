@@ -15,6 +15,36 @@ type CaseStudyData = {
 };
 
 const cases: Record<string, CaseStudyData> = {
+  "aurelis-global-music": {
+    title: "AURELIS",
+    category: "Global music & culture website concept",
+    summary: "An international music platform concept built around the meeting point of music, artists and global culture.",
+    audience: "A music and culture platform seeking a distinctive digital identity for an international audience of listeners, artists and culture enthusiasts.",
+    direction: "The concept gives the platform a clear editorial and visual identity. Its presentation is intended to make the music and cultural focus immediately recognizable, while organizing content so visitors can discover the platform and explore what it represents.",
+    focus: ["Global music and culture brand positioning", "Clear content and editorial hierarchy", "Artist- and music-led visual presentation", "A coherent navigation and discovery experience"],
+    images: ["/images/portfolio/aurelis-global-music.png"],
+    imageAlts: ["AURELIS global music and culture website design concept"],
+  },
+  "crocodile-leather-atelier": {
+    title: "Crocodile Leather Shoes",
+    category: "Luxury exotic-leather footwear website concept",
+    summary: "A luxury footwear website concept for an exotic-leather atelier, with the product and craftsmanship at the centre of the experience.",
+    audience: "A specialist footwear atelier looking to present its exotic-leather shoes and craftsmanship through a refined online brand experience.",
+    direction: "The concept is intended to feel considered and premium, allowing product imagery, material details and the character of the atelier to lead. A clear collection structure helps visitors understand the range and explore the footwear.",
+    focus: ["Luxury footwear brand presentation", "Product and collection discovery", "Craftsmanship and material storytelling", "A clear route for product enquiries"],
+    images: ["/images/portfolio/crocodile-leather-atelier.png"],
+    imageAlts: ["Luxury crocodile leather footwear atelier website design concept"],
+  },
+  "global-frontline-newsletter": {
+    title: "Global Frontline",
+    category: "Newsletter & editorial publication website concept",
+    summary: "An editorial newsletter and publication concept focused on presenting information in a clear, readable and organized digital format.",
+    audience: "A publication seeking a recognizable editorial identity and a more structured way for readers to explore its newsletter and content.",
+    direction: "The concept is built around legibility, content hierarchy and a clear publication identity. The intended experience gives headlines and editorial content a defined structure, helping readers navigate from the publication overview into individual stories and updates.",
+    focus: ["Editorial identity and publication positioning", "Readable headline and content hierarchy", "Organized newsletter and story presentation", "A clear reader subscription pathway"],
+    images: ["/images/portfolio/global-frontline-newsletter.png"],
+    imageAlts: ["Global Frontline editorial newsletter and publication website design concept"],
+  },
   "arch-studio": {
     title: "ARCH STUDIO",
     category: "Architecture & design website concept",

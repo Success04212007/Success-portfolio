@@ -9,6 +9,8 @@ const filters = [
   "BUSINESS & PROPERTY",
   "HOSPITALITY",
   "CREATIVE & SERVICE",
+  "MUSIC & ENTERTAINMENT",
+  "MEDIA & PUBLICATIONS",
   "CREATIVE PORTFOLIOS",
   "BEAUTY & WELLNESS",
   "AUTOMOTIVE",
@@ -138,6 +140,36 @@ const projects = [
     alt: "Max Taipei hairstylist balayage and dimensional hair colour website concept",
     description: "A hairstylist website concept centred on balayage, dimensional colour and a more polished presentation of specialist hair services.",
   },
+  {
+    slug: "aurelis-global-music",
+    number: "13",
+    title: "AURELIS — Where Music Meets Global Culture",
+    category: "MUSIC & ENTERTAINMENT",
+    type: "Global music & culture platform",
+    image: "/images/portfolio/aurelis-global-music.png",
+    alt: "AURELIS global music and culture website design concept",
+    description: "An international music platform concept bringing music, artists and global culture together through a distinctive digital brand experience.",
+  },
+  {
+    slug: "crocodile-leather-atelier",
+    number: "14",
+    title: "Crocodile Leather Shoes",
+    category: "E-COMMERCE",
+    type: "Luxury exotic-leather footwear",
+    image: "/images/portfolio/crocodile-leather-atelier.png",
+    alt: "Luxury crocodile leather footwear atelier website design concept",
+    description: "A luxury footwear concept for an exotic-leather atelier, with an emphasis on craftsmanship, materials and refined product presentation.",
+  },
+  {
+    slug: "global-frontline-newsletter",
+    number: "15",
+    title: "Global Frontline",
+    category: "MEDIA & PUBLICATIONS",
+    type: "Editorial newsletter & publication",
+    image: "/images/portfolio/global-frontline-newsletter.png",
+    alt: "Global Frontline editorial newsletter and publication website design concept",
+    description: "An editorial publication concept designed to present newsletter content and current affairs with a clear, structured reading experience.",
+  },
 ];
 
 export default function PortfolioGallery() {
@@ -175,7 +207,7 @@ export default function PortfolioGallery() {
                     sizes="(max-width: 800px) 92vw, (max-width: 1100px) 45vw, 30vw"
                     className="portfolio-project-image"
                   />
-                  <span className="portfolio-image-number">{project.number} / 12</span>
+                  <span className="portfolio-image-number">{project.number} / {projects.length.toString().padStart(2, "0")}</span>
                   <span className="concept-label">INDEPENDENT DESIGN CONCEPT</span>
                 </Link>
                 <div className="portfolio-concept-copy">

@@ -35,9 +35,9 @@ const principles = [
 ];
 
 const concepts = [
-  ["01", "ARCH STUDIO", "Architecture & design website concept", "A minimal studio identity and image-led project presentation.", "/images/portfolio/arch-studio.png", "/portfolio/arch-studio"],
-  ["02", "Aurelia Estates", "International property website concept", "A refined property brand direction with clear information hierarchy.", "/images/portfolio/aurelia-estates.png", "/portfolio/aurelia-estates"],
-  ["03", "Bamboo Kitchen", "Restaurant website concept", "A welcoming neighbourhood kitchen identity and clear visitor information.", "/images/portfolio/bamboo-kitchen.png", "/portfolio/bamboo-kitchen"],
+  ["13", "AURELIS", "Global music & culture website concept", "An international music platform bringing music and global culture together.", "/images/portfolio/aurelis-global-music.png", "/portfolio/aurelis-global-music"],
+  ["14", "Crocodile Leather Shoes", "Luxury footwear website concept", "A refined digital presentation for an exotic-leather footwear atelier.", "/images/portfolio/crocodile-leather-atelier.png", "/portfolio/crocodile-leather-atelier"],
+  ["15", "Global Frontline", "Editorial newsletter & publication concept", "A structured reading experience for an international editorial publication.", "/images/portfolio/global-frontline-newsletter.png", "/portfolio/global-frontline-newsletter"],
 ];
 
 export default function Home() {
@@ -112,7 +112,7 @@ export default function Home() {
             </Link>
             <div className="work-meta"><span>{number} / {type.toUpperCase()}</span><b>{title}</b><p>{description}</p><Link className="text-link" href={href}>VIEW CONCEPT CASE STUDY ↗</Link></div>
           </article>)}</div>
-          <Link className="text-link" href="/portfolio">EXPLORE ALL 12 PORTFOLIO CONCEPTS ↗</Link>
+          <Link className="text-link" href="/portfolio">EXPLORE ALL 15 PORTFOLIO CONCEPTS ↗</Link>
         </div>
       </section>
 
