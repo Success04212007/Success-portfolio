@@ -259,3 +259,18 @@
 .work-meta p{font-size:11px;color:#747c87;line-height:1.8;margin:0 0 12px}
 @media(max-width:950px){.portfolio-concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:800px){.portfolio-concept-grid{grid-template-columns:1fr}.portfolio-concept-art{min-height:260px}.portfolio-concept-art .mock-browser{height:220px;min-height:220px}.wix-value-list{width:100%;min-width:0}}
+
+/* Accordion and article reading layouts */
+.faq-item h3{margin:0}
+.faq-item h3 button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;text-align:left;background:transparent;border:0;padding:0;color:var(--ink);font:inherit;font-size:17px;font-weight:700;cursor:pointer}
+.faq-item h3 button:focus-visible,.portfolio-filter:focus-visible,.portfolio-empty-state button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.faq-toggle{flex:0 0 30px;width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;font-size:20px;font-weight:400;color:#9a7848}
+.faq-answer p{margin:12px 50px 0 0}
+.insight-card{display:flex;flex-direction:column;align-items:flex-start}
+.insight-card p{flex:1}
+.insight-card .text-link{margin-top:17px}
+.insight-article{max-width:850px}
+.insight-article>section{padding:30px 0;border-bottom:1px solid var(--line)}
+.insight-article h2{font-size:clamp(25px,3vw,34px);line-height:1.2;letter-spacing:-.8px;margin:16px 0}
+.insight-article p{font-size:15px;line-height:1.95;color:#656e7a;max-width:760px}
+@media(max-width:600px){.faq-item h3 button{font-size:15px}.faq-answer p{margin-right:0}.insight-article p{font-size:14px}}
