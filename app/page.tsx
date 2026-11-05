@@ -35,9 +35,9 @@ const principles = [
 ];
 
 const concepts = [
-  ["01", "A considered business website", "Wix business website concept", "A clear introduction, structured service information and a focused route to enquiry.", "/portfolio/considered-digital-home"],
-  ["02", "A more focused storefront", "Wix e-commerce design concept", "Product discovery, collection hierarchy and a consistent shopping journey.", "/portfolio/focused-storefront"],
-  ["03", "A clearer service journey", "Wix landing page concept", "Focused messaging, useful supporting content and a purposeful call to action.", "/portfolio/clearer-service-journey"],
+  ["01", "ARCH STUDIO", "Architecture & design website concept", "A minimal studio identity and image-led project presentation.", "/images/portfolio/arch-studio.png", "/portfolio/arch-studio"],
+  ["02", "Aurelia Estates", "International property website concept", "A refined property brand direction with clear information hierarchy.", "/images/portfolio/aurelia-estates.png", "/portfolio/aurelia-estates"],
+  ["03", "Bamboo Kitchen", "Restaurant website concept", "A welcoming neighbourhood kitchen identity and clear visitor information.", "/images/portfolio/bamboo-kitchen.png", "/portfolio/bamboo-kitchen"],
 ];
 
 export default function Home() {
@@ -102,14 +102,17 @@ export default function Home() {
 
       <section className="work-section section-pad">
         <div className="container">
-          <SectionHeading eyebrow="SELECTED WIX DESIGN CONCEPTS" title="A closer look at the thinking behind each experience." body="These examples are independent design concepts prepared to demonstrate layout, structure and visual direction. They are not presented as commissioned client work or completed live Wix launches." />
-          <div className="work-grid">{concepts.map(([number, title, type, description, href]) => <article className="work-card" key={href}>
+          <SectionHeading eyebrow="SELECTED WEBSITE DESIGN CONCEPTS" title="A closer look at the visual work behind each experience." body="Explore a selection of the actual website visuals supplied for this portfolio. Each is presented as an independent design concept, with its own case study and clear project classification." />
+          <div className="work-grid">{concepts.map(([number, title, type, description, image, href]) => <article className="work-card" key={href}>
             <Link href={href} className="work-art-link" aria-label={"View case study: " + title}>
-              <div className="work-art"><div className="mock-browser"><div className="browser-bar">● ● ● <span>WIX DESIGN CONCEPT</span></div><div className="mock-content"><small>INDEPENDENT CONCEPT / {number}</small><b>{title}</b><span>{type}</span><i className="mock-line" /></div></div><span className="concept-label">INDEPENDENT CONCEPT</span></div>
+              <div className="work-art">
+                <Image src={image} alt={title + " website design concept"} fill sizes="(max-width: 800px) 92vw, 30vw" className="work-project-image" />
+                <span className="concept-label">INDEPENDENT CONCEPT</span>
+              </div>
             </Link>
             <div className="work-meta"><span>{number} / {type.toUpperCase()}</span><b>{title}</b><p>{description}</p><Link className="text-link" href={href}>VIEW CONCEPT CASE STUDY ↗</Link></div>
           </article>)}</div>
-          <Link className="text-link" href="/portfolio">EXPLORE ALL PORTFOLIO CONCEPTS ↗</Link>
+          <Link className="text-link" href="/portfolio">EXPLORE ALL 12 PORTFOLIO CONCEPTS ↗</Link>
         </div>
       </section>
 
