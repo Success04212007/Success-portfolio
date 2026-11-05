@@ -228,3 +228,49 @@
 .about-portrait-image{object-fit:cover;object-position:center 22%;z-index:0}
 .mega-portrait-image{object-fit:cover;object-position:center 22%;z-index:0}
 .mega-portrait:before,.mega-portrait:after{z-index:1;pointer-events:none}
+
+/* Wix-only portfolio refinements */
+.wix-value-list{display:grid;grid-template-columns:repeat(2,minmax(150px,1fr));gap:12px 28px;min-width:min(100%,420px)}
+.wix-value-list span{font-size:11px;color:#48515e;padding:12px 0;border-bottom:1px solid #cfd2d1}
+.footer-quick-links{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:20px}
+.footer-quick-links a{font-size:10px;color:#d8dde5}
+.footer-quick-links a:hover{color:var(--gold)}
+.portfolio-gallery-section{padding-top:25px}
+.portfolio-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:35px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.portfolio-filter{border:1px solid #d9dce0;background:transparent;color:#535c68;padding:10px 12px;font-size:8px;letter-spacing:.9px;font-weight:800;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.portfolio-filter:hover,.portfolio-filter.is-active{background:var(--navy);border-color:var(--navy);color:white}
+.portfolio-concept-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.portfolio-concept-card{min-width:0;background:#fff;border:1px solid var(--line)}
+.portfolio-concept-art{min-height:295px;padding:25px;background:#e9e9e4;display:flex;align-items:center;position:relative;overflow:hidden}
+.portfolio-concept-card:nth-child(3n+2) .portfolio-concept-art{background:#e5e8e6}
+.portfolio-concept-card:nth-child(3n) .portfolio-concept-art{background:#e8e2d9}
+.portfolio-concept-art .mock-browser{width:100%;height:245px;min-height:245px;display:block}
+.portfolio-concept-art .mock-content{justify-content:flex-start}
+.portfolio-concept-copy{padding:22px;display:flex;flex-direction:column;align-items:flex-start}
+.portfolio-concept-copy>span{font-size:8px;letter-spacing:1px;color:#9a7848}
+.portfolio-concept-copy h2{font-size:22px;line-height:1.2;letter-spacing:-.6px;margin:14px 0 8px}
+.portfolio-concept-copy p{font-size:12px;line-height:1.8;color:#717984;flex:1}
+.portfolio-concept-copy small{font-size:8px;letter-spacing:.7px;color:#8a909b;margin:8px 0 17px}
+.portfolio-empty-state{padding:55px 25px;border:1px solid var(--line);background:white;text-align:center}
+.portfolio-empty-state>span{font-size:10px;letter-spacing:1.2px;font-weight:800;color:#9a7848}
+.portfolio-empty-state p{max-width:500px;margin:12px auto 22px;color:#747c87;font-size:13px}
+.portfolio-empty-state button{background:none;border:0;cursor:pointer}
+.work-art-link{display:block}
+.work-meta p{font-size:11px;color:#747c87;line-height:1.8;margin:0 0 12px}
+@media(max-width:950px){.portfolio-concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.portfolio-concept-grid{grid-template-columns:1fr}.portfolio-concept-art{min-height:260px}.portfolio-concept-art .mock-browser{height:220px;min-height:220px}.wix-value-list{width:100%;min-width:0}}
+
+/* Accordion and article reading layouts */
+.faq-item h3{margin:0}
+.faq-item h3 button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;text-align:left;background:transparent;border:0;padding:0;color:var(--ink);font:inherit;font-size:17px;font-weight:700;cursor:pointer}
+.faq-item h3 button:focus-visible,.portfolio-filter:focus-visible,.portfolio-empty-state button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.faq-toggle{flex:0 0 30px;width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;font-size:20px;font-weight:400;color:#9a7848}
+.faq-answer p{margin:12px 50px 0 0}
+.insight-card{display:flex;flex-direction:column;align-items:flex-start}
+.insight-card p{flex:1}
+.insight-card .text-link{margin-top:17px}
+.insight-article{max-width:850px}
+.insight-article>section{padding:30px 0;border-bottom:1px solid var(--line)}
+.insight-article h2{font-size:clamp(25px,3vw,34px);line-height:1.2;letter-spacing:-.8px;margin:16px 0}
+.insight-article p{font-size:15px;line-height:1.95;color:#656e7a;max-width:760px}
+@media(max-width:600px){.faq-item h3 button{font-size:15px}.faq-answer p{margin-right:0}.insight-article p{font-size:14px}}

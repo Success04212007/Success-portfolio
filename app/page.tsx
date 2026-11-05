@@ -1,1 +1,133 @@
-import Image from "next/image";import Link from "next/link";import{CTA,Eyebrow,SectionHeading}from"@/components/sections";const caps=[["01","Strategic website structure","Page hierarchy, content organization and navigation planned around what visitors need to understand and do."],["02","Visual design","A considered visual system shaped through typography, colour, spacing, imagery and consistency."],["03","Responsive development","A carefully built experience that adapts to mobile, tablet and desktop screens."],["04","Business-focused details","Clear calls to action, useful content flow, SEO foundations and practical functionality."]];const services=[["Business websites","Professional websites that explain your offer and help customers take the next step.","/services/business-website-design"],["Website redesign","A clearer structure and more considered experience for an existing website.","/services/website-redesign"],["E-commerce","Online stores designed to make products easy to explore and purchase.","/services/ecommerce-website-development"],["Landing pages","Focused pages for a specific offer, campaign or customer action.","/services/landing-page-design"]];export default function Home(){return <main><section className="hero"><div className="container hero-grid"><div><Eyebrow>INDEPENDENT WEBSITE DESIGNER & DIGITAL EXPERIENCE SPECIALIST</Eyebrow><h1>Your business deserves more than just a website. <em>It deserves a powerful digital presence.</em></h1><p className="hero-lede">I design and build modern, strategically structured websites that help businesses establish credibility, communicate their value, and create better experiences for their customers.</p><p className="hero-sub">From professional business websites and sophisticated online stores to conversion-focused landing pages, I combine thoughtful design with functional development around real business objectives.</p><div className="hero-actions"><Link className="button button-gold" href="/contact">START A PROJECT ↗</Link><Link className="text-link light-link" href="/portfolio">EXPLORE MY WORK ↗</Link></div><div className="hero-proof"><span>STRATEGIC WEBSITE DESIGN</span><span>RESPONSIVE DEVELOPMENT</span><span>BUSINESS-FOCUSED EXPERIENCES</span></div></div><div className="hero-visual"><div className="portrait-frame"><div className="portrait-placeholder"><Image src="/images/success-daniel-portrait.jpeg" alt="Success Daniel, Website Designer and Digital Experience Specialist" fill priority sizes="(max-width: 800px) 90vw, 36vw" className="hero-portrait-image" /></div><div className="portrait-caption"><b>SUCCESS DANIEL</b><span>Website Designer & Digital Experience Specialist</span></div></div></div></div><div className="hero-bottom container"><span>DESIGN WITH INTENTION.</span><span>DEVELOP WITH PURPOSE.</span><span>DELIVER WITH CLARITY.</span></div></section><section className="section-pad"><div className="container intro-grid"><div><Eyebrow>THE THINKING BEHIND THE DESIGN</Eyebrow><h2>A website should be more than a digital presence. <em>It should be valuable to your business.</em></h2></div><div className="intro-copy"><p>Your website is often one of the first places potential customers interact with your business. It influences how visitors perceive your brand, understand what you offer, and decide whether to take the next step.</p><p>That is why I approach website design with more than visual appearance in mind. I pay attention to how information is presented, how visitors move through the website, and how the overall experience supports your objectives.</p><Link className="text-link" href="/about">MORE ABOUT MY APPROACH ↗</Link></div></div></section><section className="cap-section section-pad"><div className="container"><SectionHeading eyebrow="WHAT BRINGS IT TOGETHER" title="Design, development, and the details that make the difference." body="A thoughtful website is the result of connected decisions, not isolated design elements."/><div className="cap-grid">{caps.map(([n,t,d])=><article className="cap-card" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></div></section><section className="section-pad"><div className="container"><div className="split-heading"><SectionHeading eyebrow="WAYS I CAN HELP" title="The right website solution for where your business is going."/><Link className="text-link" href="/services">VIEW ALL SERVICES ↗</Link></div><div className="service-grid">{services.map(([t,d,u],i)=><Link className="service-card" href={u} key={u}><span>0{i+1} / SERVICE</span><h3>{t}</h3><p>{d}</p><b>EXPLORE SERVICE ↗</b></Link>)}</div></div></section><section className="platform-section"><div className="container platform-row"><div><Eyebrow>PLATFORMS & BUILD ENVIRONMENTS</Eyebrow><h2>Built on the platform that makes sense for your project.</h2></div><div className="platforms"><span>Wix</span><span>WordPress</span><span>Shopify</span></div></div></section><section className="work-section section-pad"><div className="container"><SectionHeading eyebrow="SELECTED DESIGN DIRECTIONS" title="A look at how thoughtful digital experiences can take shape." body="These are illustrative concept directions—not client engagements or measured results."/><div className="work-grid">{[["A considered digital home","Business website concept"],["A more focused storefront","E-commerce experience concept"],["A clearer service journey","Landing page concept"]].map(([t,d],i)=><article className="work-card" key={t}><div className="work-art"><div className="mock-browser"><div className="browser-bar">● ● ● <span>PROJECT PREVIEW</span></div><div className="mock-content"><small>CONCEPT / 0{i+1}</small><b>{t}</b><span>{d}</span><i className="mock-line"/></div></div><span className="concept-label">CONCEPT PROJECT</span></div><div className="work-meta"><span>0{i+1} / CONCEPT</span><b>{t}</b></div></article>)}</div><Link className="text-link" href="/portfolio">EXPLORE PORTFOLIO ↗</Link></div></section><section className="process-preview section-pad"><div className="container process-grid"><div><Eyebrow>A CLEAR, COLLABORATIVE APPROACH</Eyebrow><h2>Good work starts with understanding the right problem.</h2><p>Every project follows a considered process—from understanding your goals and shaping the structure to design, development, testing and launch.</p><Link className="text-link" href="/process">EXPLORE MY PROCESS ↗</Link></div><div className="process-list">{[["01","Discover","Understand the business, audience, goals and requirements."],["02","Plan","Shape the site map, content priorities and experience."],["03","Design & build","Create the visual system and develop the responsive website."],["04","Review & launch","Test, refine, prepare and launch with clarity."]].map(([n,t,d])=><div key={n}><span>{n}</span><section><b>{t}</b><p>{d}</p></section></div>)}</div></div></section><CTA title="Let's create a website that works harder for your business."/></main>}
+import Image from "next/image";
+import Link from "next/link";
+import { CTA, Eyebrow, SectionHeading } from "@/components/sections";
+
+export const metadata = {
+  title: "Professional Wix Website Designer",
+  description: "Success Daniel designs modern, responsive Wix websites for businesses, entrepreneurs and personal brands, including Wix website redesigns, landing pages and CMS-powered experiences.",
+};
+
+const capabilities = [
+  ["01", "Custom Wix website design", "Thoughtfully structured Wix websites shaped around your business, audience, brand identity and goals."],
+  ["02", "Wix website redesign", "A clearer visual system, improved content hierarchy and a more useful experience for an existing Wix website."],
+  ["03", "Wix Studio experiences", "Responsive layouts and considered page compositions using Wix Studio when it suits the project."],
+  ["04", "Wix landing pages", "Focused pages that explain an offer clearly and guide visitors toward one relevant action."],
+  ["05", "Wix CMS and dynamic content", "Organized collections and repeatable page structures for content that needs to be managed and updated."],
+  ["06", "Wix functionality and optimization", "Practical forms, booking or store features, integrations, responsive checks and SEO foundations within Wix."],
+];
+
+const services = [
+  ["Wix Business Website Design", "Professional business websites that communicate your value and make the next step clear.", "/services/wix-business-website-design"],
+  ["Wix Website Redesign", "Improve an existing Wix website's structure, presentation, navigation and mobile experience.", "/services/wix-website-redesign"],
+  ["Wix Studio Website Design", "Build responsive, carefully composed website experiences using Wix Studio where appropriate.", "/services/wix-studio-website-design"],
+  ["Wix Landing Page Design", "Create focused landing pages for a service, offer, campaign or lead-generation objective.", "/services/wix-landing-page-design"],
+  ["Wix E-commerce Website Design", "Organize products and create a clear shopping experience with Wix Stores and supported features.", "/services/wix-ecommerce-website-design"],
+  ["Wix CMS and Dynamic Websites", "Structure repeatable content with Wix CMS collections and dynamic pages where useful.", "/services/wix-cms-dynamic-websites"],
+  ["Wix Functionality and Integrations", "Add appropriate forms, booking, member, newsletter and third-party features supported by Wix.", "/services/wix-functionality-integrations"],
+  ["Wix Optimization and SEO Foundations", "Improve metadata, page structure, mobile usability and practical search foundations.", "/services/wix-website-optimization-seo-foundations"],
+];
+
+const principles = [
+  ["Business understanding", "Start with the business, its audience and the purpose of the website."],
+  ["Visual consistency", "Use typography, spacing, colour and imagery as one coherent design system."],
+  ["Visitor experience", "Make information easy to understand and important actions easy to find."],
+  ["Practical functionality", "Keep forms, links, responsive layouts and agreed integrations useful and reliable."],
+];
+
+const concepts = [
+  ["01", "A considered business website", "Wix business website concept", "A clear introduction, structured service information and a focused route to enquiry.", "/portfolio/considered-digital-home"],
+  ["02", "A more focused storefront", "Wix e-commerce design concept", "Product discovery, collection hierarchy and a consistent shopping journey.", "/portfolio/focused-storefront"],
+  ["03", "A clearer service journey", "Wix landing page concept", "Focused messaging, useful supporting content and a purposeful call to action.", "/portfolio/clearer-service-journey"],
+];
+
+export default function Home() {
+  return (
+    <main>
+      <section className="hero">
+        <div className="container hero-grid">
+          <div>
+            <Eyebrow>INDEPENDENT WIX WEBSITE DESIGNER &amp; DIGITAL EXPERIENCE SPECIALIST</Eyebrow>
+            <h1>Your business deserves more than just a website. <em>It deserves a powerful digital presence.</em></h1>
+            <p className="hero-lede">I design and build modern, responsive Wix websites that help businesses establish credibility, communicate their value and create better experiences for their customers.</p>
+            <p className="hero-sub">From new business websites and thoughtful redesigns to focused landing pages and structured content experiences, I bring design, usability and practical Wix functionality together around your business objectives.</p>
+            <div className="hero-actions">
+              <Link className="button button-gold" href="/contact">START A PROJECT ↗</Link>
+              <Link className="text-link light-link" href="/portfolio">EXPLORE MY WIX WORK ↗</Link>
+            </div>
+            <div className="hero-proof"><span>WIX WEBSITE DESIGN</span><span>RESPONSIVE DEVELOPMENT</span><span>BUSINESS-FOCUSED EXPERIENCES</span></div>
+          </div>
+          <div className="hero-visual">
+            <div className="portrait-frame">
+              <div className="portrait-placeholder">
+                <Image src="/images/success-daniel-portrait.jpeg" alt="Success Daniel, Wix Website Designer and Digital Experience Specialist" fill priority sizes="(max-width: 800px) 90vw, 36vw" className="hero-portrait-image" />
+              </div>
+              <div className="portrait-caption"><b>SUCCESS DANIEL</b><span>Wix Website Designer &amp; Digital Experience Specialist</span></div>
+            </div>
+          </div>
+        </div>
+        <div className="hero-bottom container"><span>ONE SPECIALIZATION: WIX.</span><span>DESIGN WITH INTENTION.</span><span>DEVELOP WITH PURPOSE.</span></div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container intro-grid">
+          <div><Eyebrow>THE THINKING BEHIND THE DESIGN</Eyebrow><h2>A professional website should represent the true quality of your business. <em>Every detail should have a purpose.</em></h2></div>
+          <div className="intro-copy">
+            <p>Your website is often one of the first interactions potential customers have with your business. It influences how people understand your services, perceive your brand and decide whether to take the next step.</p>
+            <p>I approach Wix website design with more than visual appearance in mind. I consider content hierarchy, navigation, responsive layouts, useful functionality and the way the website supports your business objectives.</p>
+            <Link className="text-link" href="/about">MEET SUCCESS DANIEL ↗</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="cap-section section-pad">
+        <div className="container">
+          <SectionHeading eyebrow="MY CORE SPECIALIZATION" title="Focused entirely on creating better Wix website experiences." body="One platform focus, applied with care to the structure, visual presentation, usability and functionality of each project." />
+          <div className="cap-grid">{capabilities.map(([number, title, description]) => <article className="cap-card" key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container">
+          <div className="split-heading"><SectionHeading eyebrow="WIX WEBSITE DESIGN SERVICES" title="The right Wix solution for your business and its next stage." body="Explore the services I offer within the Wix ecosystem. The final scope is shaped around the requirements and functionality of each project." /><Link className="text-link" href="/services">VIEW ALL WIX SERVICES ↗</Link></div>
+          <div className="service-grid">{services.map(([title, description, href], index) => <Link className="service-card" href={href} key={href}><span>0{index + 1} / WIX SERVICE</span><h3>{title}</h3><p>{description}</p><b>EXPLORE SERVICE ↗</b></Link>)}</div>
+        </div>
+      </section>
+
+      <section className="platform-section">
+        <div className="container platform-row">
+          <div><Eyebrow>WHY A THOUGHTFUL WIX BUILD</Eyebrow><h2>Wix is the foundation. The quality comes from how the experience is planned and built.</h2></div>
+          <div className="wix-value-list"><span>Clear page structure</span><span>Flexible content management</span><span>Responsive presentation</span><span>Useful native features</span></div>
+        </div>
+      </section>
+
+      <section className="work-section section-pad">
+        <div className="container">
+          <SectionHeading eyebrow="SELECTED WIX DESIGN CONCEPTS" title="A closer look at the thinking behind each experience." body="These examples are independent design concepts prepared to demonstrate layout, structure and visual direction. They are not presented as commissioned client work or completed live Wix launches." />
+          <div className="work-grid">{concepts.map(([number, title, type, description, href]) => <article className="work-card" key={href}>
+            <Link href={href} className="work-art-link" aria-label={"View case study: " + title}>
+              <div className="work-art"><div className="mock-browser"><div className="browser-bar">● ● ● <span>WIX DESIGN CONCEPT</span></div><div className="mock-content"><small>INDEPENDENT CONCEPT / {number}</small><b>{title}</b><span>{type}</span><i className="mock-line" /></div></div><span className="concept-label">INDEPENDENT CONCEPT</span></div>
+            </Link>
+            <div className="work-meta"><span>{number} / {type.toUpperCase()}</span><b>{title}</b><p>{description}</p><Link className="text-link" href={href}>VIEW CONCEPT CASE STUDY ↗</Link></div>
+          </article>)}</div>
+          <Link className="text-link" href="/portfolio">EXPLORE ALL PORTFOLIO CONCEPTS ↗</Link>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container">
+          <SectionHeading eyebrow="HOW I APPROACH THE WORK" title="Good website design starts with understanding the business." body="The design decisions should connect to what the business needs to communicate and what its visitors need to do." />
+          <div className="cap-grid">{principles.map(([title, description], index) => <article className="cap-card" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+        </div>
+      </section>
+
+      <section className="process-preview section-pad">
+        <div className="container process-grid">
+          <div><Eyebrow>A CLEAR, COLLABORATIVE APPROACH</Eyebrow><h2>From the first conversation to a carefully reviewed Wix website.</h2><p>Every project follows a considered process: discovery, planning, design, Wix development, testing and handover. The scope and timing are agreed before the build begins.</p><Link className="text-link" href="/process">EXPLORE MY WIX PROJECT PROCESS ↗</Link></div>
+          <div className="process-list">{[["01","Discover","Understand the business, audience, goals and requirements."],["02","Plan & design","Shape the page structure, content hierarchy and visual direction."],["03","Build in Wix","Develop the approved experience and implement agreed features."],["04","Review & hand over","Check responsive layouts, links and functionality before delivery."]].map(([number,title,description])=><div key={number}><span>{number}</span><section><b>{title}</b><p>{description}</p></section></div>)}</div>
+        </div>
+      </section>
+
+      <CTA title="Let's create a Wix website that gives your business the digital presence it deserves." body="Tell me what your business does, what your website needs to achieve and the kind of experience you want to create. We can discuss the requirements and a suitable project scope." />
+    </main>
+  );
+}
