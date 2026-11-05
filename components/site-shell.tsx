@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -95,9 +96,8 @@ export function SiteHeader() {
 
             <div id="about-mega-menu" className="about-mega-menu" aria-hidden={!aboutOpen}>
               <div className="mega-intro">
-                <div className="mega-portrait" aria-label="Portrait photograph to be supplied">
-                  <span>SD</span>
-                  <small>PORTRAIT</small>
+                <div className="mega-portrait">
+                  <Image src="/images/success-daniel-portrait.jpeg" alt="Success Daniel" fill sizes="110px" className="mega-portrait-image" />
                 </div>
                 <div className="mega-profile-copy">
                   <span className="mega-kicker">THE PERSON BEHIND THE WORK</span>
