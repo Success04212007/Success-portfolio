@@ -1,1 +1,17 @@
-import Link from"next/link";import{PageIntro,CTA}from"@/components/sections";const projects=[["considered-digital-home","A considered digital home","Business website concept","Clear service presentation, a considered visual system and a structured route to enquiry."],["focused-storefront","A more focused storefront","E-commerce concept","Product discovery, collection hierarchy and a consistent shopping experience."],["clearer-service-journey","A clearer service journey","Landing page concept","Focused messaging, clear page rhythm and a purposeful call to action."]];export const metadata={title:"Portfolio"};export default function Portfolio(){return <main><PageIntro eyebrow="PORTFOLIO / SELECTED DIRECTIONS" title="Thoughtful design starts with a clear point of view." body="This portfolio area is structured to present selected work and detailed project stories. The current examples are clearly identified design concepts—not client projects or claims of completed engagements."/><section className="content-section"><div className="container case-list">{projects.map(([slug,t,c,d],i)=><article className="case-tile" key={slug}><span className="concept-tag">0{i+1} / {c.toUpperCase()}</span><h2>{t}</h2><p>{d}</p><p className="notice">Concept presentation. Not a client engagement or measured result.</p><Link href={"/portfolio/"+slug}>VIEW CONCEPT CASE STUDY ↗</Link></article>)}</div></section><CTA title="Have a project that deserves a thoughtful digital experience?"/></main>}
+import { PageIntro, CTA } from "@/components/sections";
+import PortfolioGallery from "./portfolio-gallery";
+
+export const metadata = {
+  title: "Wix Website Design Portfolio",
+  description: "Explore Success Daniel's Wix website design concepts and case studies, including business websites, service experiences, e-commerce concepts and landing pages.",
+};
+
+export default function Portfolio() {
+  return (
+    <main>
+      <PageIntro eyebrow="SELECTED WIX WEBSITE PROJECTS" title="Exploring the work and thinking behind each digital experience." body="A collection of Wix-focused independent design concepts and demonstrations showing my approach to visual presentation, website structure, user experience and responsive layouts. Project classifications are stated clearly so concepts are not confused with commissioned client work." />
+      <PortfolioGallery />
+      <CTA title="Have a similar Wix website project in mind?" body="Tell me about your business, the pages you need and the experience you want to create." />
+    </main>
+  );
+}
