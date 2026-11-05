@@ -3,13 +3,13 @@ import PortfolioGallery from "./portfolio-gallery";
 
 export const metadata = {
   title: "Wix Website Design Portfolio",
-  description: "Explore Success Daniel's Wix website design concepts and case studies, including business websites, service experiences, e-commerce concepts and landing pages.",
+  description: "Explore Success Daniel's Wix-focused website design portfolio, featuring 12 independent visual concepts across business, hospitality, beauty, automotive, retail and creative industries.",
 };
 
 export default function Portfolio() {
   return (
     <main>
-      <PageIntro eyebrow="SELECTED WIX WEBSITE PROJECTS" title="Exploring the work and thinking behind each digital experience." body="A collection of Wix-focused independent design concepts and demonstrations showing my approach to visual presentation, website structure, user experience and responsive layouts. Project classifications are stated clearly so concepts are not confused with commissioned client work." />
+      <PageIntro eyebrow="SELECTED WEBSITE DESIGN CONCEPTS" title="Real visual work. Clear thinking behind every experience." body="Explore 12 independent website design concepts using the actual visuals supplied for this portfolio. Each case study explains its intended audience and design direction. The site remains focused on Wix website design; these visuals are presented as concepts, not as proof of commissioned client projects or completed Wix launches." />
       <PortfolioGallery />
       <CTA title="Have a similar Wix website project in mind?" body="Tell me about your business, the pages you need and the experience you want to create." />
     </main>
