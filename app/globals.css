@@ -213,3 +213,11 @@
   .about-final-actions{gap:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.about-mega-menu,.mega-link,.philosophy-row,.approach-step,.nav-chevron,.nav-cta{transition:none!important}}
+
+
+/* Genuine portrait in the homepage hero */
+.portrait-placeholder{overflow:hidden;background:#182438}
+.portrait-placeholder:before{display:none}
+.hero-portrait-image{object-fit:cover;object-position:center 24%;z-index:0}
+.portrait-caption{position:relative}
+@media(max-width:800px){.portrait-placeholder{height:390px}.hero-portrait-image{object-position:center 22%}}
