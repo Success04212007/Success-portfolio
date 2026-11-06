@@ -354,3 +354,113 @@
   .contact-dock{gap:5px}
   .contact-dock-link{width:37px;height:37px}
 }
+
+
+/* Refined floating contact dock with recognizable brand marks */
+.contact-dock{
+  position:fixed;
+  right:26px;
+  bottom:30px;
+  z-index:85;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  border-radius:0;
+}
+.contact-dock-link{
+  position:relative;
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#fff;
+  border:1px solid #ffffff55;
+  box-shadow:0 7px 20px #10182725, inset 0 1px 0 #ffffff30;
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.contact-dock-whatsapp{background:#25D366}
+.contact-dock-line{background:#06C755}
+.contact-dock-facebook{background:#0866FF}
+.contact-dock-phone{background:#22334A}
+.contact-dock-email{background:#B68B52}
+.contact-dock-link svg{width:25px;height:25px;display:block;overflow:visible}
+.contact-dock-whatsapp svg{width:27px;height:27px}
+.contact-dock-line svg{width:27px;height:27px}
+.contact-dock-facebook svg{width:15px;height:24px}
+.contact-dock-phone svg{width:23px;height:23px}
+.contact-dock-email svg{width:23px;height:23px}
+.contact-dock-link:hover{
+  transform:translateX(-4px) scale(1.045);
+  box-shadow:0 10px 24px #10182730, inset 0 1px 0 #ffffff40;
+  filter:saturate(1.08);
+}
+.contact-dock-link:focus-visible{
+  outline:3px solid #C6A46A;
+  outline-offset:4px;
+}
+.contact-dock-link::after{
+  content:attr(data-tooltip);
+  position:absolute;
+  right:calc(100% + 13px);
+  top:50%;
+  transform:translate(5px,-50%);
+  padding:7px 10px;
+  border-radius:7px;
+  background:#111b2a;
+  color:#fff;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.2px;
+  line-height:1.2;
+  white-space:nowrap;
+  box-shadow:0 5px 16px #10182724;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+.contact-dock-link:hover::after,.contact-dock-link:focus-visible::after{
+  opacity:1;
+  visibility:visible;
+  transform:translate(0,-50%);
+}
+/* Brand glyph proportions in the larger contact cards */
+.contact-option-whatsapp .contact-option-icon svg{width:23px;height:23px}
+.contact-option-line .contact-option-icon svg{width:23px;height:23px}
+.contact-option-facebook .contact-option-icon svg{width:12px;height:19px}
+.contact-option-phone .contact-option-icon svg{width:21px;height:21px}
+.contact-option-email .contact-option-icon svg{width:21px;height:21px}
+@media(max-width:800px){
+  .contact-dock{
+    left:50%;
+    right:auto;
+    bottom:12px;
+    transform:translateX(-50%);
+    flex-direction:row;
+    gap:10px;
+    padding:8px 10px;
+    border:1px solid #e6e8ec;
+    border-radius:999px;
+    background:#ffffffed;
+    box-shadow:0 8px 28px #10182720;
+    max-width:calc(100vw - 20px);
+  }
+  .contact-dock-link{width:44px;height:44px}
+  .contact-dock-link::after{display:none}
+  .contact-dock-link:hover{transform:translateY(-3px) scale(1.035)}
+}
+@media(max-width:480px){
+  .contact-dock{gap:8px;padding:7px 9px}
+  .contact-dock-link{width:41px;height:41px}
+  .contact-dock-whatsapp svg,.contact-dock-line svg{width:23px;height:23px}
+  .contact-dock-facebook svg{height:21px}
+}
+@media(prefers-reduced-motion:reduce){
+  .contact-dock-link,.contact-dock-link::after{transition:none}
+}
