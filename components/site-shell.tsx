@@ -150,7 +150,7 @@ function FloatingContactDock() {
     </aside>
   );
 }
-\nexport function SiteHeader() {
+export function SiteHeader() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
