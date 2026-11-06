@@ -1,4 +1,5 @@
 import { PageIntro, Eyebrow } from "@/components/sections";
+import { ContactMethods } from "@/components/site-shell";
 import ContactForm from "./contact-form";
 
 export const metadata = {
@@ -17,6 +18,11 @@ export default function Contact() {
             <h2>Start with the business goal. We can work through the website details together.</h2>
             <p>Share a little about your business, the website you have now (if any), the features you need and what you want the website to accomplish. The more context you provide, the more useful the conversation can be.</p>
             <div className="service-detail"><h3>WIX WEBSITE DESIGN &amp; DEVELOPMENT</h3><p>New websites, redesigns, Wix Studio layouts, landing pages, e-commerce, CMS, functionality and SEO foundations.</p></div>
+            <div className="direct-contact-block">
+              <Eyebrow>CONNECT DIRECTLY</Eyebrow>
+              <h3>Choose how you would like to reach me.</h3>
+              <ContactMethods />
+            </div>
             <p className="notice">Contact form delivery is not connected yet because a verified business email or submission destination has not been supplied. This form is currently a local preview only. Do not use it to send confidential information; submitting it here does not deliver an enquiry.</p>
           </div>
           <ContactForm />
