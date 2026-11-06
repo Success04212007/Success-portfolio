@@ -199,7 +199,7 @@ export default function PortfolioGallery() {
           <div className="portfolio-concept-grid">
             {visible.map((project) => (
               <article className="portfolio-concept-card" key={project.slug}>
-                <Link className="portfolio-concept-art" href={"/portfolio/" + project.slug} aria-label={"Open case study: " + project.title}>
+                <Link className="portfolio-concept-art" href={"/portfolio/" + project.slug} aria-label={"Open full website design and case study: " + project.title}>
                   <Image
                     src={project.image}
                     alt={project.alt}
@@ -208,6 +208,10 @@ export default function PortfolioGallery() {
                     className="portfolio-project-image"
                   />
                   <span className="portfolio-image-number">{project.number} / {projects.length.toString().padStart(2, "0")}</span>
+                  <span className="portfolio-view-full" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 5 5M10.8 7.8v6M7.8 10.8h6" /></svg>
+                    VIEW FULL WEBSITE
+                  </span>
                   <span className="concept-label">INDEPENDENT DESIGN CONCEPT</span>
                 </Link>
                 <div className="portfolio-concept-copy">

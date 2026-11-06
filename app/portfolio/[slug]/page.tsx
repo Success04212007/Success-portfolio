@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CaseStudyImageViewer from "./case-study-image-viewer";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageIntro, CTA, Eyebrow } from "@/components/sections";
@@ -198,16 +198,11 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <div className="case-study-image-grid">
             {item.images.map((src, index) => (
               <figure className="case-study-image-card" key={src}>
-                <div className="case-study-image-frame">
-                  <Image
-                    src={src}
-                    alt={item.imageAlts[index]}
-                    fill
-                    priority={index === 0}
-                    sizes="(max-width: 800px) 94vw, 82vw"
-                    className="case-study-project-image"
-                  />
-                </div>
+                <CaseStudyImageViewer
+                  src={src}
+                  alt={item.imageAlts[index]}
+                  imageNumber={index + 1}
+                />
                 {item.images.length > 1 && <figcaption>{index === 0 ? "PRIMARY VISUAL" : "ADDITIONAL VISUAL"}</figcaption>}
               </figure>
             ))}

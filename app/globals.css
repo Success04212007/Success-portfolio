@@ -464,3 +464,109 @@
 @media(prefers-reduced-motion:reduce){
   .contact-dock-link,.contact-dock-link::after{transition:none}
 }
+
+
+/* Portfolio gallery: larger image previews and an obvious full-design action */
+.portfolio-concept-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.portfolio-concept-art{aspect-ratio:16/10;min-height:0;background:#e9e9e4}
+.portfolio-project-image{object-fit:cover;object-position:top center;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.portfolio-concept-art:hover .portfolio-project-image{transform:scale(1.035);filter:brightness(.86)}
+.portfolio-view-full{
+  position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-42%);
+  display:inline-flex;align-items:center;gap:9px;padding:12px 15px;
+  background:#101827eF;color:#fff;border:1px solid #ffffff55;
+  font-size:8px;font-weight:800;letter-spacing:1.25px;white-space:nowrap;
+  opacity:0;transition:opacity .25s ease,transform .25s ease;
+}
+.portfolio-view-full svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.portfolio-concept-art:hover .portfolio-view-full,.portfolio-concept-art:focus-visible .portfolio-view-full{opacity:1;transform:translate(-50%,-50%)}
+.portfolio-concept-art:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.portfolio-concept-copy{min-height:260px}
+@media(max-width:800px){
+  .portfolio-concept-grid{grid-template-columns:1fr;gap:22px}
+  .portfolio-view-full{opacity:1;transform:translate(-50%,-50%);top:auto;left:auto;right:12px;bottom:55px;padding:9px 11px;font-size:7px}
+}
+
+/* Case-study pages: show the complete supplied website screenshot at its natural ratio */
+.case-study-visual-section{padding-top:22px;padding-bottom:36px}
+.case-study-image-grid{gap:30px}
+.case-study-image-card{background:transparent;border:0;padding:0}
+.case-study-image-viewer{position:relative;width:100%;background:#e9e9e6;border:1px solid #dedfdc;overflow:hidden}
+.case-study-preview-trigger{
+  position:relative;display:block;width:100%;padding:0;margin:0;
+  border:0;background:transparent;cursor:zoom-in;text-align:left;
+}
+.case-study-full-image{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+.case-study-enlarge-prompt{
+  position:absolute;right:16px;bottom:16px;z-index:2;
+  display:inline-flex;align-items:center;gap:9px;
+  padding:12px 15px;background:#101827ed;color:#fff;
+  border:1px solid #ffffff55;box-shadow:0 7px 24px #10182730;
+  font-size:8px;font-weight:800;letter-spacing:1.15px;
+  transition:background .2s ease,transform .2s ease;
+}
+.case-study-enlarge-prompt svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.case-study-preview-trigger:hover .case-study-enlarge-prompt{background:#263851;transform:translateY(-2px)}
+.case-study-preview-trigger:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.case-study-image-card figcaption{padding:13px 3px 0}
+.case-study-lightbox{
+  position:fixed;inset:0;z-index:1000;background:#080d16f5;
+  display:flex;align-items:stretch;justify-content:center;padding:16px;
+}
+.case-study-lightbox-panel{
+  display:flex;flex-direction:column;width:min(1600px,100%);min-height:0;
+  background:#f3f4f4;border:1px solid #ffffff28;box-shadow:0 25px 90px #0009;
+}
+.case-study-lightbox-header{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:15px 20px;background:#101827;color:#fff;border-bottom:1px solid #ffffff20;
+}
+.case-study-lightbox-heading{display:grid;gap:4px;min-width:0}
+.case-study-lightbox-heading>span{font-size:8px;letter-spacing:1.5px;color:#c8b18a;font-weight:800}
+.case-study-lightbox-heading strong{font-size:13px;line-height:1.4;color:#f6f7f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.case-study-lightbox-heading small{font-size:7px;letter-spacing:1.2px;color:#9ba7b6}
+.case-study-lightbox-close{
+  display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;
+  border:1px solid #ffffff35;background:#ffffff0c;color:#fff;cursor:pointer;
+  transition:background .2s ease,border-color .2s ease;
+}
+.case-study-lightbox-close:hover{background:#ffffff20;border-color:#c8b18a}
+.case-study-lightbox-close svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.case-study-lightbox-toolbar{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 16px;
+  background:#fff;border-bottom:1px solid #e1e3e5;
+}
+.case-study-zoom-group{display:inline-flex;align-items:center;border:1px solid #dfe2e6;background:#fff}
+.case-study-zoom-group button{
+  width:37px;height:34px;border:0;background:transparent;color:#1c2737;
+  font-size:19px;line-height:1;cursor:pointer;
+}
+.case-study-zoom-group button:hover:not(:disabled){background:#f1f2f3}
+.case-study-zoom-group button:disabled{opacity:.35;cursor:not-allowed}
+.case-study-zoom-group span{min-width:54px;text-align:center;font-size:9px;font-weight:800;color:#303a48;font-variant-numeric:tabular-nums}
+.case-study-fit-button{
+  height:34px;padding:0 13px;border:1px solid #c9b68f;background:#f8f5ef;
+  color:#6d5736;font-size:8px;font-weight:800;letter-spacing:1px;cursor:pointer;
+}
+.case-study-fit-button:hover{background:#eee6d7}
+.case-study-viewer-hint{margin-left:auto;font-size:9px;color:#7c8490}
+.case-study-lightbox-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;background:#e7e9eb;text-align:center}
+.case-study-lightbox-image{display:block;height:auto;margin:0 auto;object-fit:contain;box-shadow:0 5px 30px #10182718}
+@media(max-width:800px){
+  .case-study-lightbox{padding:0}
+  .case-study-lightbox-panel{border:0}
+  .case-study-lightbox-header{padding:12px 14px}
+  .case-study-lightbox-heading strong{font-size:11px}
+  .case-study-lightbox-toolbar{padding:8px 12px;gap:8px}
+  .case-study-viewer-hint{width:100%;margin-left:0;font-size:8px}
+  .case-study-enlarge-prompt{right:10px;bottom:10px;padding:10px 12px;font-size:7px}
+}
+@media(max-width:480px){
+  .case-study-image-grid{gap:22px}
+  .case-study-lightbox-header{gap:10px}
+  .case-study-lightbox-close{width:38px;height:38px;flex-basis:38px}
+  .case-study-lightbox-image{min-width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .portfolio-project-image,.portfolio-view-full,.case-study-enlarge-prompt{transition:none}
+}
